@@ -1,24 +1,7 @@
 from fastapi import FastAPI, HTTPException
 import mysql.connector 
 import requests
-from pydantic import BaseModel
-import json
-from datetime import date
-
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="",
-    db= "Colegio"
-)
-mycurso = mydb.cursor(dictionary=True)
-class AlumnoModel(BaseModel):
-    numMatricula: int
-    nombre: str
-    fechaNacimiento: date
-    telefono:int
-
-print(mydb)
+from schema import mydb, mycurso, AlumnoModel
 app = FastAPI()
 
 @app.get("/")
