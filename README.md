@@ -1,5 +1,7 @@
-#API Rest con Python
+# API Rest con Python
 
-Prerequisitos
+## Descripción
+el proyecto api rest de la aplicación de svelte
+## Prerequisitos
 - mysql.connector
 - uvicorn
